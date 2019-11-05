@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jiami</title>
+</head>
+<body>
+    <div class="main">
+        <h3>这是一个加密的HTML文件</h3>
+    </div>
+
+    
+    <script>
+        //jiami
+        document.oncontextmenu = new Function("event.returnValue=false;");
+        document.onselectstart = new Function("event.returnValue=false;");
+        function testKeyDown(event) {
+            if (
+                (event.keyCode == 123) ||
+                (event.shiftKey) ||
+                (event.ctrlKey)) {
+                event.keyCode = 0;
+                event.returnValue = false;
+            }
+        }
+        document.onkeydown = function () {testKeyDown(event);}
+        window.onhelp = function () {return false;}
+    </script>
+</body>
+</html>
